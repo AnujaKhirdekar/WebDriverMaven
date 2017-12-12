@@ -23,11 +23,20 @@ public void setup()
 @Test
 public void doLogin()
 {
-	driver.get("https://www.facebook.com/");
-	driver.manage().timeouts().implicitlyWait(20L, TimeUnit.SECONDS);
-	driver.findElement(By.xpath(".//*[@id='email']")).sendKeys("anuja.khirdekar05@gmail.com");
-	driver.findElement(By.xpath(".//*[@id='pass']")).sendKeys("shaya@317");
+	//driver.get("https://www.facebook.com/");
+	//driver.manage().timeouts().implicitlyWait(20L, TimeUnit.SECONDS);
+	//driver.findElement(By.xpath(".//*[@id='email']")).sendKeys("anuja.khirdekar05@gmail.com");
+	//driver.findElement(By.xpath(".//*[@id='pass']")).sendKeys("shaya@317");
     //driver.findElement(By.xpath(".//*[@id='loginbutton']")).click();
+	
+	//Twitter Login
+	driver.get("https://twitter.com/login");
+	driver.manage().timeouts().implicitlyWait(20L, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(20L, TimeUnit.SECONDS);
+	driver.findElement(By.xpath(".//*[@id='page-container']/div/div[1]/form/fieldset/div[1]/input")).sendKeys("anuja.khirdekar05@gmail.com");
+	driver.findElement(By.xpath(".//*[@id='page-container']/div/div[1]/form/fieldset/div[2]/input")).sendKeys("anishadivya@317");
+    driver.findElement(By.xpath(".//*[@id='page-container']/div/div[1]/form/div[2]/button")).click();
+		
 }
 @AfterTest
  public void tearDown()
